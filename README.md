@@ -10,16 +10,16 @@ A Joomla Content Security Policy Plugin
 
 
 ## Related docs...
-https://www.itoctopus.com/how-content-security-policy-can-help-protect-your-joomla-website
-https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+* https://www.itoctopus.com/how-content-security-policy-can-help-protect-your-joomla-website
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 
 ## See also...
-https://github.com/joomla/joomla-cms/issues/14246
-https://github.com/joomla/joomla-cms/pull/18301
+* https://github.com/joomla/joomla-cms/issues/14246
+* https://github.com/joomla/joomla-cms/pull/18301
 
 ## Handy to paste...
-cp -v /var/www/html/joomla_dev_01/plugins/system/contentsecuritypolicy/* plugins/system/contentsecuritypolicy/
-cp -v /var/www/html/joomla_dev_01/administrator/language/en-GB/en-GB.plg_system_contentsecuritypolicy.*  administrator/language/en-GB/
+* cp -v /var/www/html/joomla_dev_01/plugins/system/contentsecuritypolicy/* plugins/system/contentsecuritypolicy/
+* cp -v /var/www/html/joomla_dev_01/administrator/language/en-GB/en-GB.plg_system_contentsecuritypolicy.*  administrator/language/en-GB/
 
 
 
