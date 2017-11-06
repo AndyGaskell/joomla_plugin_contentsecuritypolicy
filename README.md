@@ -16,7 +16,7 @@ A Joomla Content Security Policy Plugin
 * https://github.com/joomla/joomla-cms/pull/18301
 
 ## Options screen
-![options screen](http://ssofb.co.ukPlugins_System_-_CSP_-_joomla_dev_01_-_Administration_-_2017-11-06_23.27.54.png "Options Screen")
+![options screen](http://ssofb.co.uk/images/Plugins_System_-_CSP_-_joomla_dev_01_-_Administration_-_2017-11-06_23.27.54.png "Options Screen")
 
 ## Handy to paste...
 * cp -v /var/www/html/joomla_dev_01/plugins/system/contentsecuritypolicy/* plugins/system/contentsecuritypolicy/
