@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>plg_system_contentsecuritypolicy</name>
+	<author>Joomla! Project</author>
+    <creationDate>November 2017</creationDate>
+	<copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>3.7.0</version>
+    <description>PLG_SYSTEM_CONTENTSECURITYPOLICY_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="contentsecuritypolicy">contentsecuritypolicy.php</filename>
+	<folder>forms</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_contentsecuritypolicy.ini</language>
+        <language tag="en-GB">en-GB.plg_system_contentsecuritypolicy.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+
+
+                <field type="radio" name="front_end"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_ENABLE_FRONTEND_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_ENABLE_FRONTEND_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+
+                <field type="radio" name="back_end"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_ENABLE_BACKEND_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_ENABLE_BACKEND_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+
+                <field type="radio" name="report_only"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_REPORTONLY_REPORTONLYENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_REPORTONLY_REPORTONLYENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="report_uri"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_REPORTONLY_URI_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_REPORTONLY_URI_DESCRIPTION"
+                    required="true"
+                    default="" 
+                />
+
+                <field type="radio" name="method"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_METHOD_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_METHOD_DESCRIPTION">
+                    <option value="header">PLG_SYSTEM_CONTENTSECURITYPOLICY_METHOD_HEADER</option>
+                    <option value="metatag">PLG_SYSTEM_CONTENTSECURITYPOLICY_METHOD_METATAG</option>
+                </field>
+
+
+                <field type="radio" name="default_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_DEFAULT_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_DEFAULT_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="default_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_DEFAULT_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_DEFAULT_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="child_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_CHILD_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_CHILD_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="child_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_CHILD_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_CHILD_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="connect_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_CONNECT_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_CONNECT_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="connect_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_CONNECT_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_CONNECT_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />                
+
+                <field type="radio" name="font_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_FONT_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_FONT_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="font_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_FONT_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_FONT_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="frame_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_FRAME_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_FRAME_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="frame_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_FRAME_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_FRAME_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="img_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_IMG_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_IMG_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="img_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_IMG_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_IMG_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="manifest_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_MANIFEST_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_MANIFEST_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="manifest_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_MANIFEST_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_MANIFEST_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="media_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_MEDIA_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_MEDIA_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="media_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_MEDIA_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_MEDIA_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="object_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_OBJECT_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_OBJECT_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="object_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_OBJECT_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_OBJECT_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="script_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_SCRIPT_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_SCRIPT_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="script_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_SCRIPT_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_SCRIPT_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="style_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_STYLE_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_STYLE_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="style_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_STYLE_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_STYLE_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+                <field type="radio" name="worker_src_enable"
+                       class="radio btn-group" default="0"
+                       label="PLG_SYSTEM_CONTENTSECURITYPOLICY_WORKER_ENABLE_LABEL"
+                       description="PLG_SYSTEM_CONTENTSECURITYPOLICY_WORKER_ENABLE_DESCRIPTION">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field
+                    name="worker_src"
+                    type="text"
+                    label="PLG_SYSTEM_CONTENTSECURITYPOLICY_WORKER_SRC_LABEL"
+                    description="PLG_SYSTEM_CONTENTSECURITYPOLICY_WORKER_SRC_DESCRIPTION"
+                    required="true"
+                    default="'self'" 
+                />
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" priority="2" name="Content Security Policy">https://raw.githubusercontent.com/AndyGaskell/joomla_plugin_contentsecuritypolicy/master/dist/extension.xml</server>
+    </updateservers>
+</extension>
