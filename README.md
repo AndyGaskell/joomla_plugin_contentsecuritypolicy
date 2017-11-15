@@ -12,6 +12,7 @@ This is pretty much based on a site admin work-flow like...
 1. Set the site to `content="default-src 'self'; `
 2. See what's broken
 3. Fix broken things one at a time, like  `content="default-src 'self'; script-src 'self' *.google-analytics.com "`  to let google analytics work.
+
 In practice an admin would probably do this with `Content-Security-Policy-Report-Only` and just review the reports.
 
 ## Related docs...
